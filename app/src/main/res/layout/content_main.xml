@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="au.elegantmedia.com.camera.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--<GridView-->
+        <!--android:id="@+id/gv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:columnWidth="90dp"-->
+        <!--android:numColumns="auto_fit"-->
+        <!--android:verticalSpacing="10dp"-->
+        <!--android:horizontalSpacing="10dp"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--android:gravity="center">-->
+    <!--</GridView>-->
+    <ImageView
+        android:layout_width="368dp"
+        android:layout_height="368dp"
+        android:id="@+id/imge"
+        />
+
+</android.support.constraint.ConstraintLayout>
