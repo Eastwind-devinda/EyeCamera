@@ -16,32 +16,30 @@ import java.util.List;
 
 public class ImageDir extends Activity {
 
-    // Array of files in the images subdirectory
     File[] mImageFiles;
-    // Array of filenames corresponding to mImageFiles
-    String[] mImageFilenames;
-    // Initialize the Activity
     Intent intent;
-    GridLayout gridLayout;
     List<File> list;
     private Context context;
     private File mPrivateRootDir;
-    // The path to the "images" subdirectory
     private File mImagesDir;
 
-    public ImageDir(Context context) {
+    public ImageDir(Context context, File imageFile) {
         this.context = context;
+        this.mImagesDir = imageFile;
     }
 
     public List<File> getImage() {
 
-        // Set up an Intent to send back to apps that request a file
-        intent = new Intent(Constant.CustDir + ".ACTION_RETURN_PICK");
-        // Get the files/ subdirectory of internal storage
-        //mPrivateRootDir = getFilesDir();
-        mPrivateRootDir = new File(Constant.CustDir);
+
+        intent = new Intent(mImagesDir + ".ACTION_RETURN_PICK");
+
+        mPrivateRootDir = mImagesDir;
         // Get the files in the images subdirectory
         mImageFiles = mPrivateRootDir.listFiles();
+
+        if (mImageFiles == null) {
+            return null;
+        }
 
         list = new ArrayList<>();
 
