@@ -1,4 +1,4 @@
-package au.elegantmedia.com.camera;
+package com.eastwind.devinda.camera;
 
 import org.junit.Test;
 
